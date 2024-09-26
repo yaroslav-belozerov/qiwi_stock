@@ -2,6 +2,11 @@ package com.yaabelozerov.qiwi_stock.data.model
 
 import com.squareup.moshi.Json
 
+data class BaseComtradeResponse (
+    @Json(name = "elapsedTime") var elapsedTime: String? = null,
+    @Json(name = "data") var data: List<ComtradeResponse>? = null
+)
+
 data class ComtradeResponse (
     @Json(name = "typeCode") var typeCode: String? = null,
     @Json(name = "freqCode") var freqCode: String? = null,
